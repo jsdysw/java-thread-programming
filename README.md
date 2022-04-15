@@ -12,8 +12,8 @@
      * Testing programs were done at 8-cores cpu environment. So even thought you increase the number of threads more than 8, there’s no more performance improvement.
      * But until 8-threads, the more threads you add, the higher performance it shows
      * Dynamic load balancing shows better performance than the others. The reason why it shows better load balancing is explained below.
-<img width="600" alt="2" src="https://user-images.githubusercontent.com/76895949/163588071-794b2141-28be-4c69-b6cf-5924b00f138a.png">
-<img width="600" alt="1" src="https://user-images.githubusercontent.com/76895949/163588088-cf076a57-4da1-45c0-b171-1b18c346a8ad.png">
+   <img width="600" alt="2" src="https://user-images.githubusercontent.com/76895949/163588071-794b2141-28be-4c69-b6cf-5924b00f138a.png">
+   <img width="600" alt="1" src="https://user-images.githubusercontent.com/76895949/163588088-cf076a57-4da1-45c0-b171-1b18c346a8ad.png">
   
 * **Analysis**
 
@@ -36,7 +36,6 @@
    * In contrast, thread#7 takes way more times to count because it should try to divide more times per integer than thread#0.
    * Therefore, the loads allocated to each thread are not equal.
 
-  
 
        (3) pc_dynamic.java
 
@@ -49,7 +48,7 @@
 
 * **How to compile and execute the source code**
 
-![execute](https://user-images.githubusercontent.com/76895949/163590219-82b45907-df24-4cf1-817a-64583bafbfe0.png)
+   ![execute](https://user-images.githubusercontent.com/76895949/163590219-82b45907-df24-4cf1-817a-64583bafbfe0.png)
 
    * At terminal,
       - javac pc_static_bock.java
