@@ -87,9 +87,7 @@
 
 * **How to compile and execute the source code**
 
-     * At terminal,
-(*) javac MatmultD.java
+     * At terminal, javac MatmultD.java
 
-     * After compilation execute the program. 
-(*) java MatmultD 6 < mat500.txt
-6 means the number of threads to use, < mat500.txt means the file that contains two matrices is given as standard input.
+     * After compilation execute the program. java MatmultD 6 < mat500.txt
+     * 6 means the number of threads to use, < mat500.txt means the file that contains two matrices is given as standard input.
