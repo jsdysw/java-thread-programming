@@ -17,7 +17,7 @@
   
 * Analysis
 
-      (1) pc_static_block.java
+        (1) pc_static_block.java
   * N number of threads find the number of prime numbers at different range and gather them into one variable at last.
   * Main thread divides the whole range, 0…200000, into n sub range blocks and allocate them to n threads separately.
 
