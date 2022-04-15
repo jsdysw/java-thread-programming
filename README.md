@@ -2,10 +2,10 @@
 
 ## problem 1. Compute the number of ‘prime numbers’ between 1 and 200000.
 * experiment environment 
-   * CPU type : Apple M1
-   * number of cores : 8 core CPU
-   * memory size : 16 GB
-   * OS : macOS Monterey
+    * CPU type : Apple M1
+    * number of cores : 8 core CPU
+    * memory size : 16 GB
+    * OS : macOS Monterey
 
 * execution time (ms) per the number of entire threads = {1,2,4,6,8,10,12,14,16,32}.
 <img width="600" alt="2" src="https://user-images.githubusercontent.com/76895949/163588071-794b2141-28be-4c69-b6cf-5924b00f138a.png">
