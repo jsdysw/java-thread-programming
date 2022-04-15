@@ -11,9 +11,10 @@
 <img width="600" alt="2" src="https://user-images.githubusercontent.com/76895949/163588071-794b2141-28be-4c69-b6cf-5924b00f138a.png">
 <img width="600" alt="1" src="https://user-images.githubusercontent.com/76895949/163588088-cf076a57-4da1-45c0-b171-1b18c346a8ad.png">
   
-  * Testing programs were done at 8-cores cpu environment. So even thought you increase the number of threads more than 8, there’s no more performance improvement.
-  * But until 8-threads, the more threads you add, the higher performance it shows
-  * Dynamic load balancing shows better performance than the others. The reason why it shows better load balancing is explained below.
+>        + 세번째 블록
+  + Testing programs were done at 8-cores cpu environment. So even thought you increase the number of threads more than 8, there’s no more performance improvement.
+  + But until 8-threads, the more threads you add, the higher performance it shows
+  + Dynamic load balancing shows better performance than the others. The reason why it shows better load balancing is explained below.
 
 * Analysis
 
