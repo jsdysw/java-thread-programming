@@ -1,7 +1,7 @@
 # java-thread-programming
 
 ## problem 1. Compute the number of ‘prime numbers’ between 1 and 200000.
-* **experiment environment **
+* **experiment environment**
     * CPU type : Apple M1
     * number of cores : 8 core CPU
     * memory size : 16 GB
@@ -46,6 +46,7 @@
 
 
 * **How to compile and execute the source code**
+
 ![execute](https://user-images.githubusercontent.com/76895949/163590219-82b45907-df24-4cf1-817a-64583bafbfe0.png)
 
    * At terminal,
