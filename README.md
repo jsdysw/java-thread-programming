@@ -67,7 +67,9 @@
 	 * OS : macOS Monterey
 
 * **execution time (ms) per the number of entire threads = {1,2,4,6,8,10,12,14,16,32}.**
-  
+
+  <img width="400" alt="1" src="https://user-images.githubusercontent.com/76895949/163600047-591b34ba-29e9-4e58-8a35-118540c620b0.png">![2](https://user-images.githubusercontent.com/76895949/163600064-8e005bf6-20c8-4494-a80d-7d6f368693ab.png)
+
     * Because this experiment was done at 8-core cpu environment, performance improves until 6-8 threads. Interesting point is that more than 8 threads, the execution time rather increases. In my opinion, excessive number of threads doesn’t always guarantee better performance.
     
     * At 8-core cpu environment, It seems that for example 32 threads (more than 8) make worse queueing delay time.
