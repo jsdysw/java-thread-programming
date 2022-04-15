@@ -25,8 +25,8 @@
 
   * If an integer gets bigger, it takes more time to check whether it’s prime number or not. So Thread#3(blue) takes more time to count the number of prime numbers at its range than other Threads(red, yellow, green).
   * Therefore, the loads allocated to each thread are not equal.
-      
-      (2) pc_static_cyclic.java
+
+      (1) pc_static_cyclic.java
 
      
 
