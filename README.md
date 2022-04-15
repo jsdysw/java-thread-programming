@@ -26,15 +26,14 @@
   * If an integer gets bigger, it takes more time to check whether it’s prime number or not. So Thread#3(blue) takes more time to count the number of prime numbers at its range than other Threads(red, yellow, green).
   * Therefore, the loads allocated to each thread are not equal.
 
-            (2) pc_static_cyclic.java
+           (2) pc_static_cyclic.java
 
      
-
    * Let’s look thread#0, To define whether 8k (1 <= k < 25000) is prime number or not, dividing 8k with 2 is enough. So even though thread#1 checks the same length of range with other threads but it works only 3ms and rest.
    * In contrast, thread#7 takes way more times to count because it should try to divide more times per integer than thread#0.
    * Therefore, the loads allocated to each thread are not equal.
 
-![c2](https://user-images.githubusercontent.com/76895949/163589535-f82fcf5f-ed8d-4bbf-8dd1-da8f442d1192.png)![c](https://user-images.githubusercontent.com/76895949/163589523-d41d5dad-9bfd-464f-bf47-f6c53b026c64.png)
+   ![c2](https://user-images.githubusercontent.com/76895949/163589535-f82fcf5f-ed8d-4bbf-8dd1-da8f442d1192.png)![c](https://user-images.githubusercontent.com/76895949/163589523-d41d5dad-9bfd-464f-bf47-f6c53b026c64.png)
 
 
 
