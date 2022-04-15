@@ -50,9 +50,9 @@
    * At terminal,
       - javac pc_static_bock.java
       - javac pc_static_cyclic.java
-      - javac pc_static_dynamic.java
+      - javac pc_dynamic.java
 
    * After compilation execute the program. <java “filename” “numberOfThreads” “numRange”>
       - java pc_static_block 4 200000
       - java pc_static_cyclic 6 12000
-      - java pc_static_dynamic 8 200000
+      - java pc_dynamic 8 200000
