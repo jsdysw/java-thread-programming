@@ -68,8 +68,9 @@
 
 * **execution time (ms) per the number of entire threads = {1,2,4,6,8,10,12,14,16,32}.**
   
-    *Because this experiment was done at 8-core cpu environment, performance improves until 6-8 threads. Interesting point is that more than 8 threads, the execution time rather increases. In my opinion, excessive number of threads doesn’t always guarantee better performance.
-    *At 8-core cpu environment, It seems that for example 32 threads (more than 8) make worse queueing delay time.
+    * Because this experiment was done at 8-core cpu environment, performance improves until 6-8 threads. Interesting point is that more than 8 threads, the execution time rather increases. In my opinion, excessive number of threads doesn’t always guarantee better performance.
+    
+    * At 8-core cpu environment, It seems that for example 32 threads (more than 8) make worse queueing delay time.
 
 * **Analysis**
 
@@ -86,9 +87,9 @@
 
 * **How to compile and execute the source code**
 
-      * At terminal,
+     * At terminal,
 (*) javac MatmultD.java
 
-      * After compilation execute the program. 
+     * After compilation execute the program. 
 (*) java MatmultD 6 < mat500.txt
 6 means the number of threads to use, < mat500.txt means the file that contains two matrices is given as standard input.
