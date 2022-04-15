@@ -40,10 +40,11 @@
 
        (3) pc_dynamic.java
 
-     * In this case, there’s only one queue which all the threads can get jobs from. They share the queue together. So loads are distributed to the threads randomly and as equal amount. Therefore all thread work equally. 
+      ![c2](https://user-images.githubusercontent.com/76895949/163589535-f82fcf5f-ed8d-4bbf-8dd1-da8f442d1192.png)
+
+   * In this case, there’s only one queue which all the threads can get jobs from. They share the queue together. So loads are distributed to the threads randomly and as equal amount. Therefore all thread work equally. 
 
 
-   ![c2](https://user-images.githubusercontent.com/76895949/163589535-f82fcf5f-ed8d-4bbf-8dd1-da8f442d1192.png)
 
 
 * **How to compile and execute the source code**
