@@ -60,6 +60,7 @@
 
 # problem 2. Parallel matrix multiplication with static load balancing approach
 * **experiment environment**
+
 	   * CPU type : Apple M1
 	   * number of cores : 8 core CPU
 	   * memory size : 16 GB
