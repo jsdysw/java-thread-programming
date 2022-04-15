@@ -29,13 +29,14 @@
 
         (2) pc_static_cyclic.java
 
-     
+    
+    <img width="333" alt="스크린샷 2022-04-15 오후 11 39 06" src="https://user-images.githubusercontent.com/76895949/163589902-6e5a2014-bb2d-4028-964e-25b35b8ce1b2.png">![c](https://user-images.githubusercontent.com/76895949/163589523-d41d5dad-9bfd-464f-bf47-f6c53b026c64.png)
+
    * Let’s look thread#0, To define whether 8k (1 <= k < 25000) is prime number or not, dividing 8k with 2 is enough. So even though thread#1 checks the same length of range with other threads but it works only 3ms and rest.
    * In contrast, thread#7 takes way more times to count because it should try to divide more times per integer than thread#0.
    * Therefore, the loads allocated to each thread are not equal.
 
-   <img width="333" alt="스크린샷 2022-04-15 오후 11 39 06" src="https://user-images.githubusercontent.com/76895949/163589902-6e5a2014-bb2d-4028-964e-25b35b8ce1b2.png">![c](https://user-images.githubusercontent.com/76895949/163589523-d41d5dad-9bfd-464f-bf47-f6c53b026c64.png)
-
+  
 
        (3) pc_dynamic.java
 
