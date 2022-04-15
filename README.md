@@ -77,12 +77,15 @@
 
 * **Analysis**
 
-  
+  ![r](https://user-images.githubusercontent.com/76895949/163600237-924b6d98-74bc-4695-9401-f3923bb38904.png)
+
     * It seems that the loads allocated to each thread are very similar.
   
   
     * Let’s say we multiply two matrices A(m * n) and B(n * k). Then there result matrix C will be m*k. It means that we have to calculate m*k elements to get result C.
     * If you use “t” number of threads, then divide C’s elements into t bunch of tasks for t threads.
+
+   ![스크린샷 2022-04-16 오전 1 57 07](https://user-images.githubusercontent.com/76895949/163600268-93956ab1-6581-469a-b9ff-b8dea94a6776.png)
 
 
     * For example, let’s say the result matrix A’s shape is 20 by 20. If you use 3 threads. Each of their task domain will be like the image above. Each thread calculate their separated task domain.
@@ -91,6 +94,8 @@
 * **How to compile and execute the source code**
 
      * At terminal, javac MatmultD.java
+
+    ![e](https://user-images.githubusercontent.com/76895949/163600290-62ea05b1-cd31-4bad-9026-720c5ebe2853.png)
 
      * After compilation execute the program. java MatmultD 6 < mat500.txt
      * 6 means the number of threads to use, < mat500.txt means the file that contains two matrices is given as standard input.
