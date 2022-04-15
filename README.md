@@ -7,15 +7,11 @@
   * memory size : 16 GB
   * OS : macOS Monterey
 
-execution time (ms) per the number of entire threads = {1,2,4,6,8,10,12,14,16,32}.
+* execution time (ms) per the number of entire threads = {1,2,4,6,8,10,12,14,16,32}.
 
+<img width="609" alt="2" src="https://user-images.githubusercontent.com/76895949/163588071-794b2141-28be-4c69-b6cf-5924b00f138a.png">
 
-
-
-
-
-
-
+<img width="780" alt="1" src="https://user-images.githubusercontent.com/76895949/163588088-cf076a57-4da1-45c0-b171-1b18c346a8ad.png">
 
 
 
