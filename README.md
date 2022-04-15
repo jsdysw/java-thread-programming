@@ -68,20 +68,20 @@
 
 * **execution time (ms) per the number of entire threads = {1,2,4,6,8,10,12,14,16,32}.**
   
-      *Because this experiment was done at 8-core cpu environment, performance improves until 6-8 threads. Interesting point is that more than 8 threads, the execution time rather increases. In my opinion, excessive number of threads doesn’t always guarantee better performance.
-      *At 8-core cpu environment, It seems that for example 32 threads (more than 8) make worse queueing delay time.
+    *Because this experiment was done at 8-core cpu environment, performance improves until 6-8 threads. Interesting point is that more than 8 threads, the execution time rather increases. In my opinion, excessive number of threads doesn’t always guarantee better performance.
+    *At 8-core cpu environment, It seems that for example 32 threads (more than 8) make worse queueing delay time.
 
 * **Analysis**
 
   
-      *It seems that the loads allocated to each thread are very similar.
+    * It seems that the loads allocated to each thread are very similar.
   
   
-      *Let’s say we multiply two matrices A(m * n) and B(n * k). Then there result matrix C will be m*k. It means that we have to calculate m*k elements to get result C.
-      *If you use “t” number of threads, then divide C’s elements into t bunch of tasks for t threads.
+    * Let’s say we multiply two matrices A(m * n) and B(n * k). Then there result matrix C will be m*k. It means that we have to calculate m*k elements to get result C.
+    * If you use “t” number of threads, then divide C’s elements into t bunch of tasks for t threads.
 
 
-      *For example, let’s say the result matrix A’s shape is 20 by 20. If you use 3 threads. Each of their task domain will be like the image above. Each thread calculate their separated task domain.
+    * For example, let’s say the result matrix A’s shape is 20 by 20. If you use 3 threads. Each of their task domain will be like the image above. Each thread calculate their separated task domain.
 
 
 * **How to compile and execute the source code**
