@@ -58,12 +58,12 @@
       - java pc_dynamic 8 200000
 
 
-# problem 2. Parallel matrix multiplication with static load balancing approach**
+# problem 2. Parallel matrix multiplication with static load balancing approach
 * **experiment environment**
-	   - CPU type : Apple M1
-	   - number of cores : 8 core CPU
-	   - memory size : 16 GB
-	   - OS : macOS Monterey
+	   * CPU type : Apple M1
+	   * number of cores : 8 core CPU
+	   * memory size : 16 GB
+	   * OS : macOS Monterey
 
 * **execution time (ms) per the number of entire threads = {1,2,4,6,8,10,12,14,16,32}.**
   
