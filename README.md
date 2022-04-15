@@ -26,6 +26,7 @@
   * If an integer gets bigger, it takes more time to check whether it’s prime number or not. So Thread#3(blue) takes more time to count the number of prime numbers at its range than other Threads(red, yellow, green).
   * Therefore, the loads allocated to each thread are not equal.
 
+
         (2) pc_static_cyclic.java
 
      
@@ -33,15 +34,17 @@
    * In contrast, thread#7 takes way more times to count because it should try to divide more times per integer than thread#0.
    * Therefore, the loads allocated to each thread are not equal.
 
-   ![c2](https://user-images.githubusercontent.com/76895949/163589535-f82fcf5f-ed8d-4bbf-8dd1-da8f442d1192.png)![c](https://user-images.githubusercontent.com/76895949/163589523-d41d5dad-9bfd-464f-bf47-f6c53b026c64.png)
-
+   <img width="333" alt="스크린샷 2022-04-15 오후 11 39 06" src="https://user-images.githubusercontent.com/76895949/163589902-6e5a2014-bb2d-4028-964e-25b35b8ce1b2.png">
+![c](https://user-images.githubusercontent.com/76895949/163589523-d41d5dad-9bfd-464f-bf47-f6c53b026c64.png)
 
 
        (3) pc_dynamic.java
 
+   * In this case, there’s only one queue which all the threads can get jobs from. They share the queue together. So loads are distributed to the threads randomly and as equal amount. Therefore all thread work equally. 
 
 
-  In this case, there’s only one queue which all the threads can get jobs from. They share the queue together. So loads are distributed to the threads randomly and as equal amount. Therefore all thread work equally. 
+   ![c2](https://user-images.githubusercontent.com/76895949/163589535-f82fcf5f-ed8d-4bbf-8dd1-da8f442d1192.png)
+
 
 * How to compile and execute the source code
 
