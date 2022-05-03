@@ -1,6 +1,11 @@
 # java-thread-programming
 
-## problem 1. Compute the number of ‘prime numbers’ between 1 and 200000.
+<details>
+<summary> 
+problem 1. Compute the number of ‘prime numbers’ between 1 and 200000.
+</summary>
+<div markdown="1">
+
 * **experiment environment**
     * CPU type : Apple M1
     * number of cores : 8 core CPU
@@ -58,7 +63,15 @@
       - java pc_dynamic 8 200000
 
 
-# problem 2. Parallel matrix multiplication with static load balancing approach
+</div>
+</details>
+
+<details>
+<summary> 
+problem 2. Parallel matrix multiplication with static load balancing approach
+</summary>
+<div markdown="1">
+
 * **experiment environment**
 
 	 * CPU type : Apple M1
@@ -99,3 +112,5 @@
 
      * After compilation execute the program. java MatmultD 6 < mat500.txt
      * 6 means the number of threads to use, < mat500.txt means the file that contains two matrices is given as standard input.
+</div>
+</details>
