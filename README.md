@@ -163,7 +163,7 @@ If a thread tries to take an element while the queue is empty, the thread become
 		* **remove(Object o)** : find one element which equals to o and remove it. 
 		* **take()** : If the blocking queue is empty, If the blocking queue is empty, it block the thread until an element is inserted.
 		* **poll()** : If the blocking queue is empty, it returns null.
-		* ** poll(long millis, TimeUnit timeUnit)** : If the blocking queue is empty, it waits timeUnit for an element to become available. If not, it returns null.
+		* **poll(long millis, TimeUnit timeUnit)** : If the blocking queue is empty, it waits timeUnit for an element to become available. If not, it returns null.
 
 	* Drain Methods
 		* **drainTo(Collection dest)** : drains all the elements of the blocking queue into the dest.
@@ -171,54 +171,33 @@ If a thread tries to take an element while the queue is empty, the thread become
 
 
  
- 
-2. ReadWriteLock
+* **ex2 : 2. ReadWriteLock**
 
- “lock”, “unlock” is used for protecting critical section, for example, multiple threads’ read, write action to same resource. ReadWriteLock is also a thread lock mechanism but the difference is that ReadWriteLock allows multiple threads to read a certain resource, but only one to write it, at a time. If a thread has write lock, the others cannot access to the shared resources. If a thread has read lock, the other readers can also have read lock.
- ReadWriteLock is an interface. ReentrantReadWriteLock is implementation of ReadWriteLock.
+	* “lock”, “unlock” is used for protecting critical section, for example, multiple threads’ read, write action to same resource. ReadWriteLock is also a thread lock mechanism but the difference is that ReadWriteLock allows multiple threads to read a certain resource, but only one to write it, at a time. If a thread has write lock, the others cannot access to the shared resources. If a thread has read lock, the other readers can also have read lock.
+ 	* ReadWriteLock is an interface. ReentrantReadWriteLock is implementation of ReadWriteLock.
 
-ex2.java
-
-  
 
  
+* **ex3 : 3. AtomicInteger**
 
-Result
+	* It is an int variable which can be read and written atomically. All methods described below are safe with multiple threads’ calls.
 
+	* Methods
+		* **get()**: get integer value.
+		* **set(234)**: set integer value.
+		* **compareAndSet(expectedValue, newValue)** : Compare expectedValue with current value, and if they are same, set the current value with newValue.
+		* **getAndAdd(num)**: get the value of the AtomicInteger and add num to it
+		* **addAndGet(num)**: add num to the AtomicInteger and get its result returned
+		* **getAndIncrement()**: same as getAndAdd() but increase 1.
+		* **incrementAndGet()**: same as addAndget() but increase 1.
+		* **decrementAndGet()**: subtract 1 and get.
+		* **getAndDecrement()**: get the value and subtract 1.
  
-3. AtomicInteger
+* **ex4 : 4. CyclicBarrier**
 
- It is an int variable which can be read and written atomically. All methods described below are safe with multiple threads’ calls.
-
-Methods
-1.	get(): get integer value.
-2.	set(234): set integer value.
-3.	compareAndSet(expectedValue, newValue) : Compare expectedValue with current value, and if they are same, set the current value with newValue.
-4.	getAndAdd(num): get the value of the AtomicInteger and add num to it
-5.	addAndGet(num): add num to the AtomicInteger and get its result returned
-6.	getAndIncrement(): same as getAndAdd() but increase 1.
-7.	incrementAndGet(): same as addAndget() but increase 1.
-8.	decrementAndGet(): subtract 1 and get.
-9.	getAndDecrement(): get the value and subtract 1.
-
-ex3.java
-
- 
-
-Result
-
- 
-4. CyclicBarrier
-
-Barrier is used for synchronization. If a barrier is set, all running threads must wait at the barrier until all threads reach it. After all thread reach the point, they are released and continue running again.
- After initializing how many threads cyclic barrier will wait, call barrier.await() then N threads will wait each other at that point
+	* Barrier is used for synchronization. If a barrier is set, all running threads must wait at the barrier until all threads reach it. After all thread reach the point, they are released and continue running again.
+ 	* After initializing how many threads cyclic barrier will wait, call barrier.await() then N threads will wait each other at that point
 If you pass timeout to await function, barrier.await(10, TimeUnit.SECONDS), after 10 seconds, the barrier release all threads even though all threads didn’t reach the barrier.
-
-ex4.java
- 
-
-Result
-
 
 </div>
 </details>
