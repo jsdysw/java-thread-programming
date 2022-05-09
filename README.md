@@ -114,3 +114,111 @@ problem 2. Parallel matrix multiplication with static load balancing approach
      * 6 means the number of threads to use, < mat500.txt means the file that contains two matrices is given as standard input.
 </div>
 </details>
+	
+	
+<details>
+<summary> 
+problem 3. Solve parking garage problem
+</summary>
+<div markdown="1">
+	
+* using BlockingQueue
+	
+   <img width="781" alt="스크린샷 2022-05-09 오후 8 05 15" src="https://user-images.githubusercontent.com/76895949/167397515-315bef79-f71f-4264-8ea6-f436f89b9ecc.png">
+	
+* using semaphore
+	
+   <img width="784" alt="스크린샷 2022-05-09 오후 8 06 58" src="https://user-images.githubusercontent.com/76895949/167397740-49adf335-8170-49ed-bb6d-e4b3f2f6ca24.png">
+
+</div>
+</details>
+
+<details>
+<summary> 
+problem 4. Practice Java concurrency utilities
+</summary>
+<div markdown="1">
+	
+* **ex1 : BlockingQueue / ArrayBlockingQueue**
+
+	* BlockingQueue is an interface. A class which implements BlockingQueue becomes thread safe, which means that multiple threads can put or take elements from the queue concurrently. Only one thread at the same time can access to the queue. 
+If a thread tries to take an element while the queue is empty, the thread becomes blocked until there is an element to take. Similarly, if a thread tries to put an element and the there is no space at the queue, it becomes blocked until other thread takes an element out of the queue.
+
+	* ArrayBlockingQueue is one of the BlockingQueue’s implementations. It stores elements in a fixed array so it cannot save unlimited amounts of elements.
+
+	* Examine Methods 
+		* **size()** : return the number of elements stored in blocking queue.
+		* **remainingCapacity()** : return the remaining capacity of the blocking queue.
+		* **peek()** : return the first element of the blocking queue without removing it. If there’s no element at the queue, it returns null.
+		* **element()** : return the first element of the blocking queue without removing it. If there’s no element at the queue, it throws NoSuchElementException.
+		* **contains(Object o)** : return true if there’s an element which equals to o, otherwise return false.
+
+	* Insert Methods : insert element into the queue.
+		* **add()** : If there’s no space for the new element, it throws an IllegalStateException
+		* **put()** : iIf there’s no space for the new element, it blocks thread until the blocking queue has a space.
+		* **offer()** : If there’s no space for the new element, it returns false.
+		* **offer(long millis, TimeUnit timeUnit)** : If there’s no space for the new element, it waits timeUnit for the space. After the time out with no space were made, it returns false. 
+
+	* Remove Methods : remove the first element at the queue.
+		* **remove(Object o)** : find one element which equals to o and remove it. 
+		* **take()** : If the blocking queue is empty, If the blocking queue is empty, it block the thread until an element is inserted.
+		* **poll()** : If the blocking queue is empty, it returns null.
+		* ** poll(long millis, TimeUnit timeUnit)** : If the blocking queue is empty, it waits timeUnit for an element to become available. If not, it returns null.
+
+	* Drain Methods
+		* **drainTo(Collection dest)** : drains all the elements of the blocking queue into the dest.
+		* **drainTo(Collection dest, int maxElements)** : drains up to maxElements from the blocking queue into the dest.
+
+
+ 
+ 
+2. ReadWriteLock
+
+ “lock”, “unlock” is used for protecting critical section, for example, multiple threads’ read, write action to same resource. ReadWriteLock is also a thread lock mechanism but the difference is that ReadWriteLock allows multiple threads to read a certain resource, but only one to write it, at a time. If a thread has write lock, the others cannot access to the shared resources. If a thread has read lock, the other readers can also have read lock.
+ ReadWriteLock is an interface. ReentrantReadWriteLock is implementation of ReadWriteLock.
+
+ex2.java
+
+  
+
+ 
+
+Result
+
+ 
+3. AtomicInteger
+
+ It is an int variable which can be read and written atomically. All methods described below are safe with multiple threads’ calls.
+
+Methods
+1.	get(): get integer value.
+2.	set(234): set integer value.
+3.	compareAndSet(expectedValue, newValue) : Compare expectedValue with current value, and if they are same, set the current value with newValue.
+4.	getAndAdd(num): get the value of the AtomicInteger and add num to it
+5.	addAndGet(num): add num to the AtomicInteger and get its result returned
+6.	getAndIncrement(): same as getAndAdd() but increase 1.
+7.	incrementAndGet(): same as addAndget() but increase 1.
+8.	decrementAndGet(): subtract 1 and get.
+9.	getAndDecrement(): get the value and subtract 1.
+
+ex3.java
+
+ 
+
+Result
+
+ 
+4. CyclicBarrier
+
+Barrier is used for synchronization. If a barrier is set, all running threads must wait at the barrier until all threads reach it. After all thread reach the point, they are released and continue running again.
+ After initializing how many threads cyclic barrier will wait, call barrier.await() then N threads will wait each other at that point
+If you pass timeout to await function, barrier.await(10, TimeUnit.SECONDS), after 10 seconds, the barrier release all threads even though all threads didn’t reach the barrier.
+
+ex4.java
+ 
+
+Result
+
+
+</div>
+</details>
